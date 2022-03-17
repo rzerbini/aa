@@ -159,6 +159,7 @@ echo "Phase 5 : "
 echo "- Adding time to /etc/dev-rel"
 echo "- profile.def"
 echo "- nanorc for syntax"
+echo "- alis script"
 tput sgr0
 echo "################################################################## "
 echo
@@ -178,6 +179,15 @@ echo
 
 	echo "copy nanorc"
 	cp nanorc 	$buildFolder/archiso/airootfs/etc/nanorc
+
+	echo "copy alis"
+	mkdir -p $buildFolder/archiso/airootfs/usr/bin
+	cp alis 	$buildFolder/archiso/airootfs/usr/bin
+
+	FIND='livecd-sound'
+	REPLACE='  ["/usr/bin/alis"]="0:0:755"'
+	find $buildFolder/archiso/profiledef.sh -type f -exec sed -i "/$FIND/a $REPLACE" {} \;
+
 
 #echo
 #echo "################################################################## "
