@@ -135,9 +135,9 @@ echo
 	echo
 	echo "Git clone ALIS + ALIS-DEV"
 	mkdir $buildFolder/archiso/airootfs/alis
-	git clone https://github.com/arcolinuxiso/alis $buildFolder/archiso/airootfs/alis
+	git clone https://github.com/rzerbini/alis $buildFolder/archiso/airootfs/alis
 	mkdir $buildFolder/archiso/airootfs/alis-dev
-	git clone https://github.com/arcolinuxiso/alis-dev $buildFolder/archiso/airootfs/alis-dev
+	git clone https://github.com/rzerbini/alis-dev $buildFolder/archiso/airootfs/alis-dev
 
 echo
 echo "################################################################## "
